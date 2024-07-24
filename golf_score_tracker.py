@@ -1,6 +1,4 @@
-first_half = [("1st", 4), ("2nd", 4), ("3rd", 3), ("4th", 5), ("5th", 4), ("6th", 5), ("7th", 3), ("8th", 4), ("9th", 5)]
-second_half = [("10th", 3), ("11th", 4), ("12th", 3), ("13th", 4), ("14th", 5), ("15th", 4), ("16th", 4), ("17th", 3), ("18th", 5)]
-full_course = first_half + second_half
+full_course = [("1st", 4), ("2nd", 4), ("3rd", 3), ("4th", 5), ("5th", 4), ("6th", 5), ("7th", 3), ("8th", 4), ("9th", 5), ("10th", 3), ("11th", 4), ("12th", 3), ("13th", 4), ("14th", 5), ("15th", 4), ("16th", 4), ("17th", 3), ("18th", 5)]
 user_strokes = []
 user_putts = []
 current_score = 0
@@ -46,10 +44,10 @@ def score_counter(course_pars):
 
 if course_type == 1:
     print("\nYour playing first half, good luck!")
-    score_counter(first_half)
+    score_counter(full_course[0:9])
 elif course_type == 2:
     print("\nYour playing second half, good luck!")
-    score_counter(second_half)
+    score_counter(full_course[9:])
 elif course_type == 3:
     print("\nYour playing full course, good luck!")
     score_counter(full_course)
